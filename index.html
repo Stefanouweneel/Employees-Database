@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="css/jplist.core.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jplist.textbox-filter.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jplist.pagination-bundle.min.css" rel="stylesheet" type="text/css" />
+    <title>Employee Database</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="employee-database" class="box jplist">
+        <h1>Acato Assignment</h1>
+        <div class="jplist-panel box panel-top">
+          <div
+            class="jplist-label"
+            data-type="Page {current} of {pages}"
+            data-control-type="pagination-info"
+            data-control-name="paging"
+            data-control-action="paging">
+          </div>
+          <div
+            class="jplist-pagination"
+            data-control-type="pagination"
+            data-control-name="paging"
+            data-control-action="paging"
+            data-items-per-page="5">
+          </div>
+          <div class="text-filter-box">
+            <i class="fa fa-search  jplist-icon"></i>
+            <input
+              data-path=".tbl-item"
+              type="text"
+              value=""
+              placeholder="Search..."
+              data-control-type="textbox"
+              data-control-name="title-filter"
+              data-control-action="filter"
+            />
+          </div>
+        </div>
+        <div class="list">
+          <h4>Employees</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <p id="employee-name"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Extra information</h4>
+        </div>
+        <div class="modal-body">
+          <p id="employee-info"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jplist.core.min.js"></script>
+  <script src="js/jplist.pagination-bundle.min.js"></script>
+  <script src="js/jplist.textbox-filter.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</html>
